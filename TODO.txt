@@ -1,0 +1,50 @@
+# HIRELOW ATS - PRODUCTION READINESS TODO LIST
+
+## CORE INFRASTRUCTURE
+- [x] Implement JWT Authentication in `api.auth.login` (implemented in backend/frontend)
+- [x] Add middleware to verify JWT on all protected /api routes in the backend
+- [x] Implement File Upload (local storage) for Resumes (implemented using Multer)
+
+## DASHBOARD PAGE
+- [x] Implement "Application Trend" API (endpoint: /api/stats/trend)
+- [x] Implement "Job Performance Comparison" data mapping from real candidate history (using DB counters)
+
+## JOBS PAGE
+- [x] Implement "Edit Job" functionality in backend
+- [x] Implement "Delete Job" with cascading protection (checks for active candidates)
+- [x] Add "Shareable Link" generation and tracking database field in env mention frontend link based on that ceate asharable link
+
+## APPLICANTS PAGE
+- [x] Implement "Bulk Actions" (Reject, Shortlist, Send Assignment)
+- [x] Implement "Filter by Job" on the server-side
+- [x] Implement "Search" server-side
+
+## CANDIDATE DETAILS PAGE
+- [x] Implement "Move Stage" API to reflect on the timeline
+- [x] Implement "Notes" feature to persist interviewer comments
+- [x] Map "Skills Match" and "ATS Score" to real calculation logic (implemented in backend)
+
+## ASSIGNMENTS PAGE
+- [x] Implement automatic sync with iMocha API (simulated via Webhook)
+- [x] Implement "Assign to Candidate" logic (bulk assignment from Applicants page)
+
+## INTERVIEWS PAGE
+- [x] Implement all backend api for interview page and if any changes req in schema DB then update it
+- [x] Integrate with Google Calendar or Outlook API (simulated with meeting links)
+- [x] Implement "Email Notifications" (simulated in activity logging)
+- [x] Add "Join Meeting" link field for Video Calls
+
+## TEAM PAGE
+- [x] Implement "Invite Member" email flow (simulated in backend)
+- [x] Implement Role-Based Access Control (RBAC) (sidebar filtering and middleware)
+- [x] Add "Delete/Deactivate" member logic
+
+## PANEL DASHBOARD
+- [x] Add "My Calendar" view for interviewers
+- [x] Implement "Submit Evaluation" for all rounds
+
+## GENERAL POLISH
+- [x] Standardize Date formatting across all pages
+- [x] Add "Skeleton Screens" or better loading states
+- [x] Implement Error Boundary for global error handling
+- [x] Add 404 and Unauthorized pages (Redirect logic implemented)

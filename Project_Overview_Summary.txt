@@ -1,0 +1,56 @@
+# Employer-Focused ATS Design
+## Project Overview & Workflow Summary
+
+### 1. Project Purpose
+A comprehensive Applicant Tracking System (ATS) designed to automate the hiring pipeline, from job creation to final selection, with a focus on AI-driven candidate scoring (ATS Score) and structured interview management.
+
+### 2. User Roles
+*   **Employer (Admin):** Manages jobs, views all applicants, configures ATS weights, manages the team, and oversees the hiring funnel.
+*   **Panel (Interviewer):** Focused on conducting interviews, viewing assigned slots, and providing structured evaluations/feedback.
+*   **Candidate:** Applies for jobs via shareable links and participates in assignments and interviews.
+
+### 3. Core Modules & Flow
+
+#### A. Job Management
+*   **Creation:** Employers create job postings with specific details (Title, Dept, Type, Salary).
+*   **ATS Configuration:** Employers define "Weightage" for Skills (e.g., 40%), Education (30%), and Projects (30%).
+*   **Verification:** Employers set a "Threshold" (e.g., 70%). Candidates scoring above this are automatically flagged as "Recommended".
+*   **Shareable Links:** Each job has a unique link for candidates to apply directly.
+
+#### B. Application & ATS Scoring
+*   **Application:** Candidates submit their details, skills, and resume.
+*   **Automatic Scoring:** The system calculates an ATS Score (0-100) based on the job's defined weightages for Skills match, Education (CGPA/Degree), and Project experience.
+*   **Stats Tracking:** Real-time tracking of Total Applicants, ATS Pass/Fail, and Funnel progression.
+
+#### C. Applicants Management (The "Funnel")
+*   **Filtering:** Advanced filtering by Stage (Applied, Shortlisted, etc.), College, and Search.
+*   **Stages:** Candidates move through structured stages:
+    1.  **Applied:** Initial state.
+    2.  **ATS Shortlisted:** Passed the ATS score criteria.
+    3.  **Assignment Sent:** Coding/Design task sent to the candidate.
+    4.  **Assignment Passed:** Candidate met the passing score.
+    5.  **Interviews (L1, L2, HR):** Scheduled rounds with panel members.
+    6.  **Selected/Rejected:** Final decision.
+*   **Bulk Actions:** Ability to move multiple candidates to the next stage or reject them in one click.
+
+#### D. Assignment System
+*   **Creation:** Employers create assignment templates (Coding, Data Analysis, etc.) with passing scores and durations.
+*   **Integration:** Bulk-send assignments to shortlisted candidates directly from the Applicants page.
+
+#### E. Interview & Evaluation
+*   **Scheduling:** Integrated calendar to check panel availability and schedule rounds (L1, L2, HR).
+*   **Evaluation:** Panel members provide scores for Technical, Communication, Problem Solving, and Culture Fit.
+*   **Decision:** Structured "Recommended" or "Rejected" decisions with detailed notes.
+
+#### F. Team Management
+*   **Roles:** Management of HR Admins and Technical Panel members.
+*   **Performance:** Tracking interviews conducted by each team member.
+
+### 4. Technical Stack
+*   **Frontend:** React (TSX), Vite, Tailwind CSS, Shadcn/UI, Lucide Iconography.
+*   **Backend:** Node.js, Express, Prisma ORM.
+*   **Database:** SQLite (dev.db) for responsive and localized storage.
+*   **State Management:** TanStack Query (React Query) for efficient data fetching and caching.
+
+---
+*End of Summary*
